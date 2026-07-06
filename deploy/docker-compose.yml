@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  homehub:
+    build:
+      context: ../HomeHubApplication
+      dockerfile: Dockerfile
+    container_name: homehubservice
+    ports:
+      - "7080:8080"
+      - "7443:8443"
+    environment:
+      - ConnectionStrings__DefaultConnection=${CONNECTIONSTRING}
+      - Auth__IdentityProviderUrl=${Auth__IdentityProviderUrl}
