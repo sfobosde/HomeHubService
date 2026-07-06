@@ -24,6 +24,8 @@ namespace HomeHubApplication.API
                 options.FallbackPolicy = options.DefaultPolicy;
             });
 
+            builder.Services.AddControllers();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -36,7 +38,6 @@ namespace HomeHubApplication.API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
