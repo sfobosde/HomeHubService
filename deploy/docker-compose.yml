@@ -9,6 +9,3 @@ services:
     ports:
       - "7080:8080"
       - "7443:8443"
-    environment:
-      - ConnectionStrings__DefaultConnection=${CONNECTIONSTRING}
-      - Auth__IdentityProviderUrl=${Auth__IdentityProviderUrl}
