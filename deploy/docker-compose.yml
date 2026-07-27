@@ -12,7 +12,4 @@ services:
 networks:
   homehub-network:
     name: homehub-network
-    external: true
-    # environment:
-    #   - ConnectionStrings__DefaultConnection=${CONNECTIONSTRING}
-    #   - Auth__IdentityProviderUrl=${Auth__IdentityProviderUrl}
+    driver: bridge
